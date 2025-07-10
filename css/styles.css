@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s linear;
+  animation: move 5s linear infinite;
+}
+.circle:hover {
+  opacity: 0;
+}
+
+.loading-bar {
+  width: 400px;
+  height: 30px;
+  background-color: black;
+  animation: loading 5s linear;
+}
+.loading-bar span {
+  width: 0;
+  height: 100%;
+}
+
+@keyframes move {
+  0%, 100% {
+    transform: rotate(1turn);
+    left: 0;
+    top: 0;
+  }
+  25% {
+    transform: rotate(1turn);
+    left: calc(100vw - 150px);
+    top: 0;
+  }
+  50% {
+    transform: rotate(1turn);
+    left: calc(100vw - 150px);
+    top: calc(100vh - 150px);
+  }
+  75% {
+    transform: rotate(1turn);
+    left: 0;
+    top: calc(100vh - 150px);
+  }
+}
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
